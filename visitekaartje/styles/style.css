@@ -1,0 +1,255 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 320px;
+    width: 480px;
+    background: #ccc;
+}
+
+.driehoek_links, .driehoek_boven, .driehoek_onder, .driehoek_rechts {
+    position: absolute;
+    z-index: 1;
+}
+
+.driehoek_links {
+    height: 0;
+    width: 0;
+    border-top: 10em solid transparent;
+    border-bottom: 10em solid transparent;
+    border-left: 15em solid #ddd;
+}
+
+.driehoek_rechts {
+    height: 0;
+    width: 0;
+    border-top: 10em solid transparent;
+    border-bottom: 10em solid transparent;
+    border-right: 15em solid #ddd;
+    right: 0;
+}
+
+.driehoek_onder {
+    height: 0;
+    width: 0;
+    border-right: 15em solid transparent;
+    border-left: 15em solid transparent;
+    border-bottom: 10em solid #d1d1d1;
+    bottom: 0;
+}
+
+.driehoek_boven {
+    height: 0;
+    width: 0;
+    border-right: 15em solid transparent;
+    border-left: 15em solid transparent;
+    border-top: 13em solid #eee;
+    transition: 1s;
+    transform-origin: top;
+    transform-style: preserve-3d;
+    z-index: 2;
+}
+
+.seal {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -70%);
+    z-index: 3;
+}
+
+section {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 305px;
+    max-height: 305px;
+    width: 465px;
+    z-index: 0;
+    background-color: transparent;
+    transition: .1s;
+}
+
+.inner_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front {
+    width: 100%;
+    background: #000;
+    height: 100%;
+}
+
+.back {
+    width: 100%;
+    background: #000;
+    height: 100%;
+    transform: rotateY(180deg);
+    display: flex;
+    font-size: .7em;
+    overflow: hidden;
+}
+
+nav {
+    min-width: 40%;
+}
+
+.me {
+    height: 305px;
+    background-image: url("../images/me.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.me li {
+    display: flex;
+}
+
+.nav_icon {
+    width: 35px;
+    align-self: flex-end;
+    margin-bottom: 1em;
+}
+
+.nav_icon:hover {
+    filter: drop-shadow(0px 0px 3px #fff);
+    cursor: pointer;
+}
+
+.kader {
+    transition: 1s;
+}
+
+.kader div {
+    height: 305px;
+    padding: 1em;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    line-height: 305px;
+    font-size: 1.6em;
+    margin-top: .5em;
+}
+
+span {
+    color: #ff1493;
+}
+
+/* main:hover .driehoek_boven{
+
+}
+
+main:hover .inner_section {
+} */
+
+.seal:hover {
+    cursor: pointer;
+}
+
+.delay {
+    transition: .1s;
+    z-index: 3;
+    transition-delay: 2s;
+}
+
+.open_me {
+    transform: rotateX(-180deg);
+    transition-duration: 1s;
+    z-index: 0;
+}
+
+.zoom_in {
+    animation-name: postcard;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.html_open {
+    margin-top: -305px;
+    transition: .5s;
+    background-color: rgb(199, 75, 75);
+}
+
+.css_open {
+    margin-top: -610px;
+    transition: .5s;
+    background-color: rgb(37, 55, 134);
+}
+
+.javas_open {
+    margin-top: -915px;
+    transition: .5s;
+    background-color: rgb(4, 85, 28);
+}
+
+
+@keyframes postcard {
+    0% {
+        transform: translateY(0%) scale(1);
+    }
+    25% {
+        transform: translateY(-120%) scale(1);
+    }
+    50% {
+        transform: translateY(0%) scale(1.5);
+    }
+    75% {
+        transform: translateY(0%) scale(1.5) rotateY(0deg);
+    }
+    100% {
+        transform: translateY(0%) scale(1.5) rotateY(180deg);
+    }
+}
+
+@keyframes postcardClose {
+    0% {
+        transform: translateY(0%) scale(1.5) rotateY(180deg);
+    }
+    25% {
+        transform: translateY(0%) scale(1.5) rotateY(0deg);
+    }
+    50% {
+        transform: translateY(0%) scale(1.5);
+    }
+    75% {
+        transform: translateY(-120%) scale(1);
+    }
+    100% {
+        transform: translateY(0%) scale(1);
+    }
+}
