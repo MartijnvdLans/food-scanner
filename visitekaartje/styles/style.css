@@ -11,7 +11,7 @@ body {
     width: 100vw;
 }
 
-main {
+.kaartje_martijn {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -48,7 +48,7 @@ main {
     width: 0;
     border-right: 15em solid transparent;
     border-left: 15em solid transparent;
-    border-bottom: 10em solid #d1d1d1;
+    border-bottom: 10.1em solid #d1d1d1;
     bottom: 0;
 }
 
@@ -74,7 +74,7 @@ main {
     z-index: 3;
 }
 
-section {
+.visitekaartje {
     color: #fff;
     position: absolute;
     top: 50%;
@@ -151,7 +151,7 @@ nav {
     transition: 1s;
 }
 
-.kader div {
+.overMij, .html, .css, .javas {
     height: 305px;
     padding: 1em;
 }
@@ -196,6 +196,20 @@ main:hover .inner_section {
     animation-duration: 4s;
     animation-iteration-count: 1;
     animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.close_me {
+    transform: rotateX(0deg);
+    transition-duration: 1s;
+    transition-delay: 2s;
+    z-index: 3;
+}
+
+.zoom_out {
+    animation-name: postcardClose;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
@@ -251,5 +265,73 @@ main:hover .inner_section {
     }
     100% {
         transform: translateY(0%) scale(1);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .kaartje_martijn {
+        height: 30em;
+        width: 14em;
+    }
+
+    .driehoek_onder {
+        border-right: 7em solid transparent;
+        border-left: 7em solid transparent;
+        border-bottom: 15em solid #d1d1d1;
+    }
+
+    .driehoek_boven {
+        border-right: 7em solid transparent;
+        border-left: 7em solid transparent;
+        border-top: 15em solid #eee;
+    }
+
+    .driehoek_links {
+        border-bottom: 15em solid transparent;
+        border-top: 15em solid transparent;
+        border-left: 7em solid #ddd;
+    }
+
+    .driehoek_rechts {
+        border-bottom: 15em solid transparent;
+        border-top: 15em solid transparent;
+        border-right: 7em solid #ddd;
+    }
+
+    .visitekaartje {
+        height: 30em;
+        max-height: 30em;
+        width: 14em;
+    }
+
+    .back {
+        flex-direction: column;
+    }
+
+    .html_open {
+        margin-left: -19em;
+        margin-top: 0;
+    }
+    
+    .css_open {
+        margin-left: -38em;
+        margin-top: 0;
+    }
+    
+    .javas_open {
+        margin-left: -57em;
+        margin-top: 0;
+    }
+
+    .overMij, .html, .css, .javas {
+        min-width: 19em;
+        height: 100%;
+    }
+
+    .kader {
+        display: flex;
+        width: 77em;
+        height: 16em;
     }
 }
