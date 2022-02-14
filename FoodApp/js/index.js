@@ -14,6 +14,8 @@ async function detect() {
   const video = document.createElement("video");
   video.srcObject = mediaStream;
   video.autoplay = true;
+  video.videoWidth = "300px";
+  video.videoHeight = "300px"
 
   list.before(video);
 
