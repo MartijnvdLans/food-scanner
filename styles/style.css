@@ -61,7 +61,7 @@ body {
     transition: 1s;
     transform-origin: top;
     transform-style: preserve-3d;
-    z-index: 2;
+    perspective: 1000px;
 }
 
 .seal {
@@ -70,8 +70,7 @@ body {
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translate(-50%, -70%);
-    z-index: 3;
+    transform: translate(-50%, -70%) translateZ(1em);
 }
 
 .visitekaartje {
