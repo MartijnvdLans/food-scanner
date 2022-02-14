@@ -1,23 +1,12 @@
-var onFailSoHard = function(e)
-    {
-            console.log('failed',e);
-    }
+ var video = document.querySelector("#videoElement");
 
-    window.URL = window.URL || window.webkitURL ;
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
-
-    var video = document.querySelector('video');
-
-    if(navigator.getUserMedia)
-    {
-        navigator.getUserMedia({video: true},function(stream) {
-        video.src = window.URL.createObjectURL(stream);
-        },onFailSoHard);
-    }
-
-
-        var canvas = document.getElementById('canvas'); 
-    var ctx = canvas.getContext('2d');
-setInterval(function(){ 
-ctx.drawImage(video,0,0);
-     }, 100);
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+      video.facingMode = "environment"
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
