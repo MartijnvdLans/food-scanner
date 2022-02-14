@@ -15,7 +15,9 @@ BarcodeDetector.getSupportedFormats()
 
 barcodeDetector.detect(imageEl)
     .then(barcodes => {
+        var text = document.querySelector('h1')
       barcodes.forEach(barcode => console.log(barcode.rawData));
+      text.content = barcode.rawData
     })
     .catch(err => {
       console.log(err);
