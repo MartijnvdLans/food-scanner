@@ -14,10 +14,8 @@ async function detect() {
   const video = document.createElement("video");
   video.srcObject = mediaStream;
   video.autoplay = true;
-  video.videoWidth = "300px";
+  video.videoWidth = "100vw";
   video.videoHeight = "300px";
-
-  list.before(video);
 
 
   function render() {
@@ -28,7 +26,7 @@ async function detect() {
           if (!itemsFound.includes(barcode.rawValue)) {
             itemsFound.push(barcode.rawValue);
             const li = document.createElement("li");
-            li.innerHTML = barcode.rawValue;
+            li.innerHTML = product.name;
             const newBarcode = barcode.rawValue; 
             list.appendChild(li);
             const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode+ '.json'
