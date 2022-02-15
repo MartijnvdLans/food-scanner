@@ -6,6 +6,7 @@ window.onload = () => {
 async function detect() {
   const barcodeDetector = new BarcodeDetector();
   const list = document.getElementById("barcodes");
+  const videoPlace = document.querySelector("main section:first-of-type")
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: "user" }
@@ -17,7 +18,7 @@ async function detect() {
   video.videoWidth = "300px";
   video.videoHeight = "300px"
 
-  list.before(video);
+  videoPlace.before(video);
 
 
   function render() {
@@ -54,7 +55,7 @@ async function detect() {
          </div>
         `;
         
-        document.querySelector("main section:first-of-type").innerHTML = markup;    
+        document.querySelector("#content").innerHTML = markup;    
             })
             .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
           }
