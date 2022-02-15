@@ -6,17 +6,17 @@ window.onload = () => {
 async function detect() {
   const barcodeDetector = new BarcodeDetector();
   const list = document.getElementById("barcodes");
-  const videoPlace = document.querySelector("main section:first-of-type")
+  const videoPlace = document.querySelector("main section:first-of-type h2");
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
-    video: { facingMode: "user" }
+    video: { facingMode: "environment" }
   });
 
   const video = document.createElement("video");
   video.srcObject = mediaStream;
   video.autoplay = true;
-  video.videoWidth = "300px";
-  video.videoHeight = "300px"
+  video.videoWidth = "300vw";
+  video.videoHeight = "200px"
 
   videoPlace.before(video);
 
