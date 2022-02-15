@@ -18,7 +18,7 @@ async function detect() {
   video.videoWidth = "100vw";
   video.videoHeight = "300px";
 
-  list.before(video);
+  h2.before(video);
 
 
   function render() {
