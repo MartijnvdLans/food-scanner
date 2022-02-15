@@ -17,3 +17,7 @@ video {
 	background-color: #666;
     object-fit: cover;
 }
+
+ul {
+	list-style-type: none;
+}
