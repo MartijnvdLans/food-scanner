@@ -5,9 +5,16 @@
 	border: 2px #333 solid;
 } */
 
+*, html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 section:nth-child(1) {
 	position: absolute;
 	height: 200px;
+	top: 0
 
 }
 
