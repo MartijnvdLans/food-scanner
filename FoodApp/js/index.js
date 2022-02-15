@@ -17,6 +17,8 @@ async function detect() {
   video.videoWidth = "100vw";
   video.videoHeight = "300px";
 
+  list.before(video);
+
 
   function render() {
     barcodeDetector
@@ -52,7 +54,7 @@ async function detect() {
          </div>
         `;
         
-        document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
+        document.querySelector("main section:first-child").innerHTML = markup;    
             })
             .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
           }

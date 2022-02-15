@@ -5,6 +5,12 @@
 	border: 2px #333 solid;
 } */
 
+*, html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 video {
 	width: 100vw;
 	height: 300px;
