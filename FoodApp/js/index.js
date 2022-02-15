@@ -8,7 +8,7 @@ async function detect() {
   const list = document.getElementById("barcodes");
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
-    video: true
+    video: {facingMode: "environment"}
   });
 
   const video = document.createElement("video");
@@ -54,7 +54,7 @@ async function detect() {
          </div>
         `;
         
-        document.querySelector("main section:first-of-type").innerHTML = markup;    
+        document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
             })
             .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
           }
