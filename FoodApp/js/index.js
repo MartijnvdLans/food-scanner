@@ -8,14 +8,14 @@ async function detect() {
   const list = document.getElementById("barcodes");
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
-    video: {facingMode: { ideal: "environment"}}
+    video: { facingMode: "environment" }
   });
 
   const video = document.createElement("video");
   video.srcObject = mediaStream;
   video.autoplay = true;
-  video.videoWidth = "100vw";
-  video.videoHeight = "300px";
+  video.videoWidth = "300px";
+  video.videoHeight = "300px"
 
   list.before(video);
 
@@ -54,7 +54,7 @@ async function detect() {
          </div>
         `;
         
-        document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
+        document.querySelector("main section:first-of-type").innerHTML = markup;    
             })
             .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
           }
@@ -72,4 +72,3 @@ async function detect() {
     render();
   })();
 }
-
