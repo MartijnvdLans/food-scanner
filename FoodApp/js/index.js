@@ -8,7 +8,7 @@ async function detect() {
   const list = document.getElementById("barcodes");
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
-    video: {facingMode: { ideal: "environment"}}
+    video: {facingMode: { ideal: "environment"}, zoom: true}
   });
 
   const video = document.createElement("video");
