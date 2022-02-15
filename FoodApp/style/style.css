@@ -12,7 +12,7 @@ section:nth-child(1) {
 }
 
 video {
-	width: 300vw;
+	width: 100vw;
 	height: 200px;
 	background-color: #666;
     object-fit: cover;
