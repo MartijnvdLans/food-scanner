@@ -26,8 +26,8 @@ async function detect() {
         barcodes.forEach((barcode) => {
           if (!itemsFound.includes(barcode.rawValue)) {
             itemsFound.push(barcode.rawValue);
-            const li = document.createElement("li");
-            li.innerHTML = barcode.rawValue;
+            // const li = document.createElement("li");
+            // li.innerHTML = barcode.rawValue;
             const newBarcode = barcode.rawValue; 
             list.appendChild(li);
             const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode+ '.json'
