@@ -4,7 +4,7 @@ window.onload = () => {
 
 
 async function detect() {
-  const barcodeDetector = new BarcodeDetector();
+  // const barcodeDetector = new BarcodeDetector();
   const list = document.getElementById("barcodes");
   const videoPlace = document.querySelector("main section:first-of-type div");
   let itemsFound = [];
@@ -32,7 +32,7 @@ async function detect() {
             li.innerHTML = barcode.rawValue;
             const newBarcode = barcode.rawValue; 
             list.appendChild(li);
-            const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode+ '.json'
+            const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json'
             fetch(getURL).then(response => response.json())
             .then(response => {
                 console.log(response.product)
@@ -45,14 +45,12 @@ async function detect() {
                 }
         
                 const markup = `
-         <div class="person">
                 <img src=${product.img}>
                 <h2>${product.name} </h2>
             <h3>
                 ${product.brand}
             </h3>
             <p class="location">${product.nutriscore}</p>
-         </div>
         `;
         
         document.querySelector("#content").innerHTML = markup;    
