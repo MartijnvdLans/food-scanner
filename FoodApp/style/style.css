@@ -43,3 +43,14 @@ section:nth-child(2) h2 {
 ul {
 	display: none;
 }
+
+figure {
+	width: 250px;
+	height: 250px;
+	border-radius: .1em;
+	background: #fff;
+}
+
+img {
+	height: 100%;
+}
