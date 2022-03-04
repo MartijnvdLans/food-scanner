@@ -4,7 +4,7 @@ window.onload = () => {
 
 
 async function detect() {
-  const barcodeDetector = new BarcodeDetector();
+  // const barcodeDetector = new BarcodeDetector();
   const list = document.getElementById("barcodes");
   const videoPlace = document.querySelector("main section:first-of-type div");
   let itemsFound = [];
@@ -28,8 +28,8 @@ async function detect() {
         barcodes.forEach((barcode) => {
           if (!itemsFound.includes(barcode.rawValue)) {
             itemsFound.push(barcode.rawValue);
-            const li = document.createElement("li");
-            li.innerHTML = barcode.rawValue;
+            // const li = document.createElement("li");
+            // li.innerHTML = barcode.rawValue;
             const newBarcode = barcode.rawValue; 
             list.appendChild(li);
             const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json'
@@ -50,7 +50,7 @@ async function detect() {
             <h3>
                 ${product.brand}
             </h3>
-            <p class="location">${product.nutriscore}</p>
+            <p>${product.nutriscore}</p>
         `;
         
         document.querySelector("#content").innerHTML = markup;    
