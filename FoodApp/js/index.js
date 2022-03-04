@@ -41,7 +41,7 @@ async function detect() {
                     name: response.product.product_name,
                     brand: response.product.brand_owner,
                     nutriscore: response.product.nutrient_levels.fat,
-                    img: response.product.image_front_url
+                    img: response.product.image_front_small_url
                 }
         
                 const markup = `
