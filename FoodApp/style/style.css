@@ -37,8 +37,19 @@ section:nth-child(2) {
 section:nth-child(2) h2 {
 	max-width: 300px;
 	text-align: center;
-	margin: 1em auto;
+	margin: 1em auto .3em auto;
 	color: royalblue;
+}
+
+section:nth-child(2) h3 {
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+section:nth-child(2) p {
+	margin: .5em auto;
+	text-align: center;
 }
 
 section:nth-child(3), ul, li {
@@ -46,9 +57,9 @@ section:nth-child(3), ul, li {
 }
 
 figure {
-	width: 4em;
-	height: 4em;
-	border-radius: .1em;
+	width: 8em;
+	height: 8em;
+	border-radius: 1em;
 	background: #fff;
 	margin: 0 auto;
 	padding: .5em;
@@ -56,4 +67,5 @@ figure {
 
 img {
 	height: 100%;
+	margin: 0 auto;
 }
