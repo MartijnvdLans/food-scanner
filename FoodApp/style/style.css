@@ -2,7 +2,13 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'League Spartan', sans-serif;
 }
+
+/* FONTS */
+
+/* font-family: 'League Spartan', sans-serif;
+font-family: 'Raleway', sans-serif; */
 
 section:nth-child(1) {
 	position: absolute;
@@ -20,6 +26,12 @@ video {
 
 section:nth-child(2) {
 	margin-top: 200px;
+}
+
+section:nth-child(2) h2 {
+	max-width: 300px;
+	text-align: center;
+	margin: 1em auto;
 }
 
 ul {
