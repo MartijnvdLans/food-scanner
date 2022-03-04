@@ -50,7 +50,7 @@ async function detect() {
             <h3>
                 ${product.brand}
             </h3>
-            <p>${product.nutriscore}</p>
+            <p class="location">${product.nutriscore}</p>
         `;
         
         document.querySelector("#content").innerHTML = markup;    
