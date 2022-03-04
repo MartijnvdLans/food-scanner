@@ -45,13 +45,13 @@ async function detect() {
                 }
         
                 const markup = `
-                <img src=${product.img}>
-                <h2>${product.name} </h2>
-            <h3>
-                ${product.brand}
-            </h3>
-            <p class="location">${product.nutriscore}</p>
-        `;
+                <figure>
+                   <img src=${product.img}>
+                </figure>
+                <h2>${product.name}</h2>
+                <h3>${product.brand}</h3>
+                <p class="location">${product.nutriscore}</p>
+                `;
         
         document.querySelector("#content").innerHTML = markup;    
             })

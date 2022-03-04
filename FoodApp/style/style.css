@@ -5,6 +5,11 @@
 	font-family: 'League Spartan', sans-serif;
 }
 
+html {
+	background: #eee;
+	min-height: 100vh;
+}
+
 /* FONTS */
 
 /* font-family: 'League Spartan', sans-serif;
@@ -26,6 +31,7 @@ video {
 
 section:nth-child(2) {
 	margin-top: 200px;
+	border-top: 5px solid crimson;
 }
 
 section:nth-child(2) h2 {
