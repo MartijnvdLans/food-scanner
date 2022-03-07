@@ -18,8 +18,7 @@ font-family: 'Raleway', sans-serif; */
 section:nth-child(1) {
 	position: absolute;
 	height: 200px;
-	top: 0
-
+	top: 0;
 }
 
 video {
@@ -27,11 +26,11 @@ video {
 	height: 200px;
 	background-color: #666;
     object-fit: cover;
+	border-bottom: 5px solid royalblue;
 }
 
 section:nth-child(2) {
-	margin-top: 200px;
-	border-top: 5px solid royalblue;
+	top: 200px;
 	position: fixed;
 	width: 100vw;
 }

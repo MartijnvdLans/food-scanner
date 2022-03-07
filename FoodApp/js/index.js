@@ -4,7 +4,7 @@ window.onload = () => {
 
 
 async function detect() {
-  const barcodeDetector = new BarcodeDetector();
+  // const barcodeDetector = new BarcodeDetector();
   const list = document.getElementById("barcodes");
   const videoPlace = document.querySelector("main section:first-of-type div");
   let itemsFound = [];
