@@ -10,7 +10,7 @@ var kader = document.querySelector(".kader");
 var htmlEnabled = false;
 var cssEnabled = false;
 var jsEnabled = false;
-var audio = new Audio('./envelop2.wav');
+var audio = new Audio('./assets/envelop2.wav');
 
 function openKaart() {
     if (kaartOpen === true) {
