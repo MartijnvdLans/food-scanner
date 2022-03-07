@@ -88,3 +88,27 @@ img {
 	margin: 0 auto;
 	display: flex;
 }
+
+/* LOADING STATE */
+
+.mockup {
+	color: transparent!important;
+	background: rgb(170,170,170);
+	background: linear-gradient(50deg, #ccc, #aaa, #ccc);
+	background-position: center;
+	background-size: 400%;
+	animation: backgroundMove 5s linear infinite;
+}
+
+@keyframes backgroundMove {
+	0% {
+		background-position: 0%;
+	}
+	50% {
+		background-position: 100%;
+	}
+	100% {
+		background-position: 0%;
+	}
+	
+}
