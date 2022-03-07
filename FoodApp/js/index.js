@@ -55,7 +55,6 @@ async function detect() {
                 <h3>${product.brand}</h3>
                 <ul>
                     <li>Kcal:  ${product.energy}</li>
-                    <li>Dit is een test</li>
                     <li>Koolhydraten  ${product.carbo}</li>
                     <li>Vetten  ${product.fat}</li>
                     <li>Eiwitten  ${product.proteins}</li>
