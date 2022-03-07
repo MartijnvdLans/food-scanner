@@ -94,10 +94,10 @@ img {
 .mockup {
 	color: transparent!important;
 	background: rgb(170,170,170);
-	background: linear-gradient(50deg, #ccc, #aaa, #ccc);
+	background: linear-gradient(50deg, #ddd 0%, #aaa 40%, #aaa 60%, #ddd 100%);
 	background-position: center;
 	background-size: 400%;
-	animation: backgroundMove 5s linear infinite;
+	animation: backgroundMove 10s linear infinite;
 }
 
 @keyframes backgroundMove {
