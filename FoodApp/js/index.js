@@ -54,11 +54,11 @@ async function detect() {
                 <h2>${product.name}</h2>
                 <h3>${product.brand}</h3>
                 <ul>
-                  <li>${product.energy}<li>
-                  <li>${product.carbo}<li>
-                  <li>${product.fat}<li>
-                  <li>${product.fiber}<li>
-                  <li>${product.proteins}<li>
+                    <li>Kcal:  ${product.energy}<li>
+                    <li>Koolhydraten  ${product.carbo}<li>
+                    <li>Vetten  ${product.fat}<li>
+                    <li>Eiwitten  ${product.proteins}<li>
+                    <li>Vezels  ${product.fiber}<li>
                 </ul>
                 `;
         
