@@ -112,3 +112,14 @@ img {
 	}
 	
 }
+
+/* ERROR STATE */
+
+.error {
+	background-color: crimson;
+	color: crimson;
+}
+
+h2.error {
+	color: #fff!important;
+}
