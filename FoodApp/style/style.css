@@ -68,6 +68,8 @@ figure {
 
 img {
 	height: 100%;
+	width: 100%;
+	object-fit: cover;
 	margin: 0 auto;
 	display: flex;
 }
