@@ -39,11 +39,11 @@ async function detect() {
                 const product = {
                     name: response.product.product_name,
                     brand: response.product.brand_owner,
-                    energy: response.product['nutriements'].energy_value,
-                    carbo: response.product['nutriements'].carbohydrates,
-                    fat: response.product['nutriements'].fat,
-                    fiber: response.product['nutriements'].fiber,
-                    proteins: response.product['nutriements'].proteins_value,
+                    // energy: response.product['nutriements'].energy_value,
+                    // carbo: response.product['nutriements'].carbohydrates,
+                    // fat: response.product['nutriements'].fat,
+                    // fiber: response.product['nutriements'].fiber,
+                    // proteins: response.product['nutriements'].proteins_value,
                     img: response.product.image_front_url
                 }
         
