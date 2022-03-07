@@ -40,7 +40,11 @@ async function detect() {
                 const product = {
                     name: response.product.product_name,
                     brand: response.product.brand_owner,
-                    nutriscore: response.product.nutrient_levels.fat,
+                    energy: response.product['nutriements'].energy_value,
+                    carbo: response.product['nutriements'].carbohydrates,
+                    fat: response.product['nutriements'].fat,
+                    fiber: response.product['nutriements'].fiber,
+                    proteins: response.product['nutriements'].proteins_value,
                     img: response.product.image_front_url
                 }
         
@@ -50,7 +54,13 @@ async function detect() {
                 </figure>
                 <h2>${product.name}</h2>
                 <h3>${product.brand}</h3>
-                <p class="location">${product.nutriscore}</p>
+                <ul>
+                  <li>${product.energy}<li>
+                  <li>${product.carbo}<li>
+                  <li>${product.fat}<li>
+                  <li>${product.fiber}<li>
+                  <li>${product.proteins}<li>
+                </ul>
                 `;
         
         document.querySelector("#content").innerHTML = markup;    
