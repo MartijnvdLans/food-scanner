@@ -31,11 +31,10 @@ async function detect() {
             const li = document.createElement("li");
             li.innerHTML = barcode.rawValue;
             const newBarcode = barcode.rawValue; 
-            list.appendChild(li);
+            // list.appendChild(li);
             const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json'
             fetch(getURL).then(response => response.json())
             .then(response => {
-                console.log(response.product)
         
                 const product = {
                     name: response.product.product_name,
