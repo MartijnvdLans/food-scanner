@@ -67,9 +67,9 @@ section:nth-child(2) li {
 	text-decoration: underline;
 }
 
-section:nth-child(3), section:nth-child(3) ul, section:nth-child(3) li {
+/* section:nth-child(3), section:nth-child(3) ul, section:nth-child(3) li {
 	display: none;
-}
+} */
 
 figure {
 	width: 8em;
