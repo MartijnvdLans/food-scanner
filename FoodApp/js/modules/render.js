@@ -4,8 +4,6 @@ export function showData(product) {
     <img src="${product.img}" alt="${product.name}" />
     `;
     
-    const detailsEl = document.querySelector('.details');
-    detailsEl.addEventListener('click', toggleDetails);
-    detailsEl.innerHTML = productMarkup;
-    detailsEl.classList.add('result', 'open')
+    const content = document.querySelector('#content');
+    content.innerHTML = productMarkup;
 }
