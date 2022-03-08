@@ -15,12 +15,11 @@ export function getData(barcode) {
         if (data.status) {
             const product = {
                 name: data.product.product_name,
-                brand: data.product.brand_owner,
-                energy: data.product['nutriments'].energy_value,
-                carbo: data.product['nutriments'].carbohydrates,
-                fat: data.product['nutriments'].fat,
-                fiber: data.product['nutriments'].fiber,
-                proteins: data.product['nutriments'].proteins_value,
+                energy: data.product.nutriments['energy-kcal_100g'],
+                carbo: data.product['nutriments'].carbohydrates_100g,
+                fat: data.product['nutriments'].fat_100g,
+                fiber: data.product['nutriments'].fiber_100g,
+                proteins: data.product['nutriments'].proteins_100g,
                 img: data.product.image_front_url
             }
             return product;
