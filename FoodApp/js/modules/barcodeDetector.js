@@ -30,8 +30,3 @@ function detectBarcode(video) {
         }
     }, 1000)
 }
-
-export function stopCamera() {
-    const video = document.querySelector("video");
-    video.classList.remove('videoOn')
-}
