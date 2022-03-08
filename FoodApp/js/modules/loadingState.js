@@ -1,5 +1,3 @@
-import { stopCamera } from "./barcodeDetector";
-
 export function loadingState() {
     const loadMarkup = `
             <figure class="mockup">
@@ -16,5 +14,4 @@ export function loadingState() {
 
     const content = document.querySelector('#content');
     content.innerHTML = loadMarkup;
-    stopCamera();
 }

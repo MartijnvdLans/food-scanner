@@ -1,5 +1,3 @@
-import { stopCamera } from "./barcodeDetector";
-
 export function errorState() {
     const errMarkup = `
     <figure class="error">
@@ -11,5 +9,4 @@ export function errorState() {
 
     const content = document.querySelector('#content');
     content.innerHTML = errMarkup;
-    stopCamera();
 }
