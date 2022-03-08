@@ -14,8 +14,14 @@ export function getData(barcode) {
     .then((data) => {
         if (data.status) {
             const product = {
-                name: data.product.product_name_nl || data.product.product_name,
-                img: data.product.image_front_url || Object.values(data.product.selected_images.front.display)[0]
+                name: data.product.product_name,
+                brand: data.product.brand_owner,
+                energy: data.product['nutriments'].energy_value,
+                carbo: data.product['nutriments'].carbohydrates,
+                fat: data.product['nutriments'].fat,
+                fiber: data.product['nutriments'].fiber,
+                proteins: data.product['nutriments'].proteins_value,
+                img: data.product.image_front_url
             }
             return product;
         } else {
