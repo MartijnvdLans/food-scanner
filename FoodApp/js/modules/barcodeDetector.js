@@ -12,6 +12,9 @@ export async function getCamera() {
     await video.play();
     video.classList.add('videoOn')
 
+    const button = document.querySelector('#scanbutton');
+    button.style.display = 'none'
+
     detectBarcode(video)
 }
 
