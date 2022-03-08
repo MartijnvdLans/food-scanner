@@ -1,3 +1,5 @@
+import { stopCamera } from "./barcodeDetector";
+
 export function showData(product) {
     const productMarkup = `
     <figure>
@@ -16,4 +18,5 @@ export function showData(product) {
     
     const content = document.querySelector('#content');
     content.innerHTML = productMarkup;
+    stopCamera();
 }
