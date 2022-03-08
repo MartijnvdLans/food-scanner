@@ -1,9 +1,9 @@
 import { errorState } from "./errorState.js";
 
 export function getData(barcode) {
-    const baseURL = 'https://world.openfoodfacts.org/api/v0/product/'
+    const URL = 'https://world.openfoodfacts.org/api/v0/product/'
 
-    return fetch(baseURL + barcode)
+    return fetch(URL + barcode)
     .then((response) => {
         if (response.ok) {
             return response.json();
@@ -25,7 +25,6 @@ export function getData(barcode) {
             }
             return product;
         } else {
-            // return Promise.reject(data);
             errorState()
         }
     })

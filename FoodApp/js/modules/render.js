@@ -12,6 +12,7 @@ export function showData(product) {
                     <li>Eiwitten  ${product.proteins}</li>
                     <li>Vezels  ${product.fiber}</li>
                 </ul>
+                <a id="scanbutton" class="display" href="#scan">Scan nog een product</a>
     `;
     
     const content = document.querySelector('#content');
