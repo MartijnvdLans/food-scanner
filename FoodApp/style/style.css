@@ -6,8 +6,15 @@
 }
 
 html {
-	background: #eee;
+	background-image: url(../images/fruitimg.jpg);
+	background-position: right;
+	background-size: cover;
 	min-height: 100vh;
+}
+
+main {
+	height: 100vh;
+	background: rgba(255, 255, 255, .9);
 }
 
 /* FONTS */
@@ -23,16 +30,33 @@ section:nth-child(1) {
 
 video {
 	width: 100vw;
-	height: 200px;
+	height: 0px;
 	background-color: #666;
     object-fit: cover;
 	border-bottom: 5px solid royalblue;
+	transition: 1s;
+}
+
+.videoOn {
+	height: 200px;
+}
+
+a {
+	background: royalblue;
+	color: #fff;
+	padding: 2em;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	font-size: 16px;
 }
 
 section:nth-child(2) {
 	top: 200px;
 	position: fixed;
 	width: 100vw;
+	min-height: 500px;
 }
 
 section:nth-child(2) h2 {
@@ -116,10 +140,6 @@ img {
 /* ERROR STATE */
 
 .error {
-	background-color: crimson;
-	color: crimson;
-}
-
-h2.error {
-	color: #fff!important;
+	background-color: transparent;
+	color: crimson!important;
 }
