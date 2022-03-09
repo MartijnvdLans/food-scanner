@@ -45,6 +45,19 @@ This application uses openfoodfacts' [API](https://world.openfoodfacts.org/data)
 
 To see the process of making this Web App, check out my [wiki](https://github.com/MartijnvdLans/food-scanner/wiki)
 
+## To do
+
+| | Done  |
+| ------------- | ------------- |
+| Fetch Data from API  | ✅ |
+| Render Data from API | ✅ |
+| Routing | ✅ |
+| Loading state | ✅ |
+| Error State | ✅ |
+| Personal day goal | |
+| Search by name | |
+| Save items | |
+
 ## Author
 
 Martijn van der Lans
