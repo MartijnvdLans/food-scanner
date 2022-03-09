@@ -54,9 +54,9 @@ To see the process of making this Web App, check out my [wiki](https://github.co
 | Routing | ✅ |
 | Loading state | ✅ |
 | Error State | ✅ |
+| Close Camera on scan | |
 | Personal day goal | |
 | Search by name | |
-| Save items | |
 
 ## Author
 
