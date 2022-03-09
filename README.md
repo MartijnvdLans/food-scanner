@@ -1,4 +1,4 @@
-# Food Scanner
+# Foodi
 
 <img src="./Docs-Wiki/Foodi.png" WIDTH="100%">
 
