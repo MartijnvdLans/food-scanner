@@ -24,7 +24,13 @@ git clone https://github.com/MartijnvdLans/food-scanner.git
 
 ## Activity Diagram
 
+versie 1.0
+
 <img src="./Docs-Wiki/states.png">
+
+versie 2.0
+
+<img src="./Docs-Wiki/newStates.png">
 
 ## Devices
 
